@@ -291,30 +291,3 @@ void deleteData(FILE* file, int* size, struct OneShipment shipments[]){
   
 }
 
-/*
-void processing(struct OneShipment shipments[], int length, int* size){
-  signal(SIGUSR1, signalHandler);
-  
-  int totalQuantity[50] = {0};
-
-   for(int i = 0; i < length; i++) {
-       totalQuantity[i] += shipments[i].quantity;
-
-       if(totalQuantity[i] >= 150) {
-           pid_t child = fork();
-           if(child == 0) {
-               childProcess(shipments, i);
-               exit(0);
-           }
-       }
-   }
-}
-*/
-
-/*
-void childProcess(struct OneShipment *shipments, int index) {
-   printf("Child process started for wine type: %s\n", shipments[index].type);
-   sleep(3); // Simulate processing time
-   printf("Child process ended for wine type: %s\n", shipments[index].type);
-}
-*/
